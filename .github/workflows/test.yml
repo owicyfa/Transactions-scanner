@@ -1,0 +1,12 @@
+name: Test API Keys
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Testing Dune API key (first few chars): ${DUNE_API_KEY:0:5}..."
+          echo "Testing Dune SIM API key (first few chars): ${DUNE_SIM_API_KEY:0:5}..."
+        env:
+          DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
+          DUNE_SIM_API_KEY: ${{ secrets.DUNE_SIM_API_KEY }}
