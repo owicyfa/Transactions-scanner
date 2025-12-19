@@ -1,0 +1,13 @@
+{
+  "name": "true-scan",
+  "version": "1.0.0",
+  "description": "Ethereum trace_filter scanner for pool analysis",
+  "main": "scanner.js",
+  "scripts": {
+    "scan": "node scanner.js"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0",
+    "dotenv": "^16.4.7"
+  }
+}
